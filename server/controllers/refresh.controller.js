@@ -26,6 +26,6 @@ exports.refresh = async (req, res) => {
     res.cookie("refreshToken", refreshToken, { httpOnly: true });
     res.status(200).json({ accessToken });
   } catch (error) {
-    res.send(error);
+    res.status(500).json({ error: "Refresh Failed" });
   }
 };

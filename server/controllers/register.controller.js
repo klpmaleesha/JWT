@@ -41,6 +41,6 @@ exports.register = async (req, res) => {
       accessToken,
     });
   } catch (error) {
-    res.status(500).json({ error });
+    res.status(500).json({ error: "Register Failed" });
   }
 };
